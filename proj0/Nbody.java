@@ -31,6 +31,7 @@ public class Nbody{
 			StdDraw.show();
 			StdDraw.pause(10);
 			t += dt;
+	}
 
 		StdOut.printf("%d\n", planets.length);
 		StdOut.printf("%.2e\n", r);
@@ -39,10 +40,9 @@ public class Nbody{
             planets[i].xxPos, planets[i].yyPos, planets[i].xxVel,
             planets[i].yyVel, planets[i].mass, planets[i].imgFileName);   
 		}			
-		}
 
 
-		}
+}
 
 		public static double readRadius(String filename){
 			In in = new In(filename);
