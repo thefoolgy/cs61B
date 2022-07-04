@@ -7,7 +7,7 @@ public class ArrayDeque<T> {
     public ArrayDeque() {
         items = (T[]) new Object[8];
         size = 0;
-        nextFirst = 4
+        nextFirst = 4;
         nextLast = 5;
     }
     private void resize(int capacity) {
@@ -20,7 +20,7 @@ public class ArrayDeque<T> {
         nextLast = size;
     }
     private T getLast() {
-        return items[minusOne(getLast)];
+        return items[minusOne(nextLast)];
     }
     private T getFirst() {
         return items[addOne((nextFirst))];
@@ -84,7 +84,7 @@ public class ArrayDeque<T> {
         return x;
     }
     public T get(int index) {
-        if (idnex > size) {
+        if (index > size) {
             return null;
         }
         int start = addOne(nextFirst);
