@@ -22,7 +22,7 @@ public class ArrayDeque<T> {
         return items[nextFirst + 1];
     }
     public void addLast(T item) {
-        if (size = items.length) {
+        if (size == items.length) {
             resize(size * 2);
         }
         else if (nextLast == items.length - 1) {
@@ -76,7 +76,7 @@ public class ArrayDeque<T> {
         return x;
     }
     public T get(int index) {
-        if (items[index]) {
+        if (items[index] != null) {
             return items[index];
         }
         return null;
