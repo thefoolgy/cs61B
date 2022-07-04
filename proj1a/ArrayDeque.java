@@ -5,13 +5,13 @@ public class ArrayDeque<Item> {
     int nextLast;
 
     public ArrayDeque() {
-        items = (Item[]) new Object(8);
+        items = (Item[]) new Object[8];
         size = 0;
         nextFirst = 4;
         nextLast = 5;
     }
     private void resize(int capacity) {
-        Item[] a = (Item[]) new Object(capacity);
+        Item[] a = (Item[]) new Object[capacity];
         System.arraycopy(items, 0, a, 0, size);
         items = a;
     }
