@@ -22,6 +22,8 @@ public class TestPalindrome {
         String a = "noon";
         assertFalse(palindrome.isPalindrome(d));
         assertTrue(palindrome.isPalindrome(a));
+        assertTrue(palindrome.isPalindrome("aaccbbbccaa"));
+        assertFalse(palindrome.isPalindrome("ababba"));
 
     }
     @Test
