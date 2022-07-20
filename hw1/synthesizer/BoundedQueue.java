@@ -8,7 +8,7 @@ public interface BoundedQueue<T> extends Iterable<T>{
     public T dequeue();
     public T peek();
     default boolean isEmpty() {
-        if (capacity() == 0) {
+        if (fillCount() == 0) {
             return true;
         }
         return false;
