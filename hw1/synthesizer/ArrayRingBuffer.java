@@ -55,10 +55,10 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
         if (this.isEmpty()) {
             throw new RuntimeException("Ring buffer underflow");
         }
-        int first_item = first;
+        T first_item = rb[first];
         fillCount -= 1;
-        first = (first - 1) % capacity;//同上
-        return rb[first_item];
+        first = (first + 1) % capacity;//同上
+        return first_item;
     }
 
     /**
